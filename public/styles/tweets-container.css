@@ -1,4 +1,4 @@
-#tweets-container{
+article {
   display: flex;
   flex-direction: column;
   height: 250px;
@@ -8,14 +8,14 @@
   margin: 1em;
 }
 
-#tweets-container header {
+article header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-#tweets-container footer {
+article footer {
   margin-top: 1em;
   border-top: .2em solid;
   display: flex;
@@ -24,13 +24,14 @@
   align-items: center;
 }
 
- footer h6{
+ article h6{
   display: flex;
   align-self: flex-start;
   margin-right: auto
 
 }
-fa fa-flag {
-border: 2px solid black;
-margin: auto;
- }
+article button {
+display: flex;
+margin: .1em;
+border: 1px solid black;
+}
