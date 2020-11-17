@@ -1,17 +1,18 @@
 header.profile {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  align-content: center;
   height: 400px;
   width: 100%;
+  margin-top: 120px;
   background-color: #000a06;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  justify-content: center;
-  align-items: center;
   color: yellow;
 }
 /* header */
 header img{
   display: flex;
   justify-content: center;
-  margin-top: 1em;
+  margin-top: 20px;
 }
