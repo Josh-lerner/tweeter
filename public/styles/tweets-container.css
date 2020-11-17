@@ -1,0 +1,36 @@
+#tweets-container{
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+  border: .2em solid;
+  padding: .5em;
+  margin: 1em;
+}
+
+#tweets-container header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#tweets-container footer {
+  margin-top: 1em;
+  border-top: .2em solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ footer h6{
+  display: flex;
+  align-self: flex-start;
+  margin-right: auto
+
+}
+fa fa-flag {
+border: 2px solid black;
+margin: auto;
+ }
