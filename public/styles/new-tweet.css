@@ -2,7 +2,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 10em
+  margin-bottom: 1em
 
 }
 
@@ -20,20 +20,26 @@ textarea#tweet-text {
   height: 40px;
   margin-bottom: .5em;
   margin-top: .5em;
+  width: 800px;
 
   /* tweet button and coutner */
   
 }
-  div {
-  display: flex;
-  justify-content: space-between;
+  footer {
+    display: flex;
+    justify-content: space-between;
 
 }
 
-div button {
+footer button {
   background-color: #4056A1;
   color: #ffffff;
   padding: 2px;
-  border: 5px;
+  border-left: 5px;
 
+}
+
+
+footer output.counter.error {
+  color: 	red
 }
