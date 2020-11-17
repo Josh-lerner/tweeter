@@ -1,4 +1,4 @@
-header {
+header.profile {
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -9,7 +9,7 @@ header {
   align-items: center;
   color: yellow;
 }
-
+/* header */
 header img{
   display: flex;
   justify-content: center;
