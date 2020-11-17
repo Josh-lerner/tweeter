@@ -35,3 +35,22 @@ display: flex;
 margin: .1em;
 border: 1px solid black;
 }
+
+
+article:hover{
+  box-shadow: 10px 10px grey;
+  
+}
+
+article:hover header h5{
+display: flex;
+}
+
+article header h5 {
+  display:none;
+}
+
+
+/* tags dont need anything.... more specific  higher chance to break 
+class selecting needs . re aplication
+id needs #     1 specific thing */ 
