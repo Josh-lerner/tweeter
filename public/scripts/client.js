@@ -73,7 +73,7 @@ const loadTweets = function() {
     dataType: 'JSON'
   }).then(function(response) {
     const reverseData = response.reverse() // reverse so the newest ones appear at the top
-    loadTweets(reverseData)
+    renderTweets(reverseData)
   })
 };
 
