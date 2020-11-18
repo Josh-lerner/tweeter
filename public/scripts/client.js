@@ -3,33 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const data =
-  [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-
-    }
-  ]
+const data =[]
+  
 
 const renderTweets = function (tweets) {
   const tweetsArr = [];
@@ -57,8 +32,8 @@ const createTweetElement = function (tweet) {
       <footer>
         <h6>${timeElapsed(tweet)}</h6>
         <button type="retweet"><i class="fa fa-retweet" aria-hidden="true"></i></button>
-        <button type="like"><i class="fa fa-heart" aria-hidden="true"></i></button>
         <button type="flag"><i class="fa fa-flag" aria-hidden="true"></i></button>
+        <button type="like"><i class="fa fa-heart" aria-hidden="true"></i></button>
       </footer>
     </article>
   `
@@ -72,7 +47,7 @@ const timeElapsed = function (tweet) {
     timeAgo = `${Math.floor(seconds / 60 / 60 / 24 / 365)} years ago`;
   } else if
     (seconds > 86400 && seconds < (86400 * 365)) {
-    timeAgo = `${Math.floor(seconds / 60 / 60 / 24)}, days ago`;
+    timeAgo = `${Math.floor(seconds / 60 / 60 / 24)} days ago`;
   } else if
     (seconds < 86400 && seconds > 3600) {
     timeAgo = `${Math.floor(seconds / 60 / 60)} hours ago`;
@@ -89,3 +64,34 @@ const timeElapsed = function (tweet) {
 
 
 renderTweets(data);
+
+// gets tweets from '/tweets' page 
+const loadTweets = function() {
+  $.ajax({
+    url: '/tweets',
+    method: 'GET',
+    dataType: 'JSON'
+  }).then(function(response) {
+    const reverseData = response.reverse() // reverse so the newest ones appear at the top
+    loadTweets(reverseData)
+  })
+};
+
+$(document).ready(() => {
+  loadTweets(); // pastes tweets 
+  $("form").on("submit", event => {
+    event.preventDefault(); 
+    $.ajax({
+      type: "POST",
+      url: "/tweets",
+      data: $("form").serialize(),
+      dataType: "text"
+    }).then(function()  {
+      $("#tweets-container").empty() 
+      $("form").trigger('reset');
+      $(".counter").text('140')
+      loadTweets()
+      console.log('Ajax request success')
+    });
+  })
+}) 
