@@ -5,14 +5,19 @@ header.profile {
   align-content: center;
   height: 400px;
   width: 100%;
-  margin-top: 120px;
+  margin-top: 100px;
   background-color: #000a06;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
   color: yellow;
 }
 /* header */
-header img{
+header img {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; 
+
 }
