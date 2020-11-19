@@ -1,0 +1,59 @@
+@media only screen and (min-width: 700px) {
+  
+  body {
+    display: flex;
+    background-color: beige;
+  }
+
+  nav {
+    display: flex;
+    height: 120px;
+    width: 100%;
+    background-color: #000a06;
+    background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+    color: yellow;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    margin-bottom: 200px;
+  
+  }
+ 
+
+
+header.profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  height: 40%;
+  width: 40%;
+  margin-top: 15%;
+  margin-left: 5%;
+  background-color: #000a06;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  color: yellow;
+}
+
+header img {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover; 
+
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 15%;
+}
+
+
+
+
+
+}
