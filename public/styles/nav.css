@@ -14,8 +14,8 @@ nav {
 /* tweeter logo */
  nav span.title {
   font-family: 'Bungee', cursive;
-  margin: 1.5em;
-  font-size: 1.5em;
+  margin: 1.2em;
+  font-size: 1.2em;
 }
 
 #write-tweet {
@@ -25,14 +25,19 @@ nav {
   background: transparent;
   border: none;
   outline: none;
-  justify-content: center;
+  /* justify-content: center; */
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em;
   color: yellow;
-  margin: 1.5em;
+  margin: 1.2em;
 
 
 }
+#bounce {
+  margin: 3px auto;
+  color: red
+}
+
 .fa-angle-double-down {
   display: inline-block;
   position: relative;
