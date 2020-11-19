@@ -1,21 +1,36 @@
-article {
+.tweets-container {
   display: flex;
   flex-direction: column;
-  height: 250px;
+  /* height: 250px;
   width: 100%;
-  border: .2em solid;
+  padding: .5em;
+  margin: 1em;
+  border: .1em solid; */
+
+} 
+
+.tweet-container{
+  border: .1em solid black;
   padding: .5em;
   margin: 1em;
 }
 
-article header {
+.tweets-container header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+
 }
 
-article footer {
+.tweets-container header img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover; 
+}
+
+.tweets-container footer {
   margin-top: 1em;
   border-top: .2em solid;
   display: flex;
@@ -24,31 +39,36 @@ article footer {
   align-items: center;
 }
 
- article h6{
+.tweets-container h6{
   display: flex;
   align-self: flex-start;
   margin-right: auto
 
 }
-article button {
-display: flex;
-margin: .1em;
-border: 1px solid black;
+.tweet-container button {
+  display: flex;
+  margin: .1em;
+  border: 1px solid black;
 }
 
 
-article:hover{
+.tweet-container:hover{
   box-shadow: 10px 10px grey;
   
 }
 
-article:hover header h5{
-display: flex;
+.tweet-container header h5 {
+  display:none;
+  align-self: flex-end;
+
 }
 
-article header h5 {
-  display:none;
+.tweet-container:hover header h5{
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto
 }
+
 
 
 /* tags dont need anything.... more specific  higher chance to break 
