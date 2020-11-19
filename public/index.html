@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
@@ -32,12 +33,16 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="title">tweeter</span>
-      <span class="tweet"><b>Write</b> a tweet</span>
+       <button id="write-tweet">
+        <span><b>Write</b> a tweet</span>
+        <i  id="bounce" class="fa fa-angle-double-down" aria-hidden="true"></i> 
+      </button>
     </nav>
+   
 
     <header class ="profile">
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="data:image/jpeg;base64,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"> 
       </div>
       <br>
       <div>
@@ -48,26 +53,16 @@
     <!-- Page-specific (main) content here -->
     <main class="container"> 
       <section class="new-tweet">
+        <div class="alert"> </div>
       <form action= "/tweets" method="POST" >
-        <label for="tweet-text">What are you humming about?</label>
+        <label for="tweet-text"> <b>What are you humming about?</b></label>
         <textarea name="text"  id="tweet-text"></textarea>
         <footer>
           <button type="submit">Tweet</button> 
           <output name="counter" class="counter" for="tweet-text">140</output>
         </footer>
       </form>
-      <article id="tweets-container">
-        <header>
-          <h4>Clark Kent</h4>
-          <h5>@Supes</h5>
-        </header>
-        <section class="tweet"> I hate shiny, green rocks</section>
-        <footer>  <h6>date</h6>
-          <button type="flag"><i class="fa fa-flag" aria-hidden="true"></i></button>
-          <button type="retweet"><i class="fa fa-retweet" aria-hidden="true"></i></button>
-          <button type="like"><i class="fa fa-heart" aria-hidden="true"></i></button>
-        </footer>
-      </article>
+      <article class="tweets-container"></article>
     </section>
     </main>
   </body>
