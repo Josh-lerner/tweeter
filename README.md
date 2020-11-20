@@ -6,10 +6,10 @@ Tweeter is built using HTML, CSS, JS, jQuery and AJAX.
 
 ##screenshots
 
-![Screen shot of Desktop view] (https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Desktop%20view.png)
+!["Screen shot of Desktop view"] (https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Desktop%20view.png)
 
 
-![Screen shot of Mobile view] (https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Mobile%20view.png)
+!["Screen shot of Mobile view"] (https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Mobile%20view.png)
 
 ## Dependencies
 
