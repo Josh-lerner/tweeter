@@ -42,7 +42,8 @@
 .tweets-container h6{
   display: flex;
   align-self: flex-start;
-  margin-right: auto
+  margin-right: auto;
+  font-family: 'Source Sans Pro', sans-serif;
 
 }
 .tweet-container button {
