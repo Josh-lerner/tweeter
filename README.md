@@ -4,12 +4,21 @@ Tweeter is a simple, single-page Twitter clone.
 
 Tweeter is built using HTML, CSS, JS, jQuery and AJAX.
 
+## Project description
+
+I was given an incomplete code, containing the server.
+The server is built with Node and Express and allows users to request and submit tweets via a JSON end-point. 
+I had to work with and implement the HTML, CSS and client-side JS to bring this project to life.
+The final product is a responsive twitter clone for mobile and desktop views.
+
+
+
 ## Screenshots
 
-!["Screen shot of Desktop view"] (https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Desktop%20view.png)
+!["Screen shot of Desktop view"](https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Desktop%20view.png)
 
 
-!["Screen shot of Mobile view"] (https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Mobile%20view.png)
+!["Screen shot of Mobile view"](https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Mobile%20view.png)
 
 ## Dependencies
 
