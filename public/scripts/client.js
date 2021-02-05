@@ -1,19 +1,13 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+
 const data = []
 
+  // takes return value and appends it to the tweets container
 
 const renderTweets = function (tweets) {
   const tweetsArr = [];
-  // loops through tweets
   for (let tweet of tweets) {
-    // calls createTweetElement for each tweet
     tweetsArr.push(createTweetElement(tweet));
   }
-  // takes return value and appends it to the tweets container
   $(document).ready(() => {
     $('.tweets-container').append(tweetsArr);
   })
@@ -73,7 +67,7 @@ const loadTweets = function () {
     method: 'GET',
     dataType: 'JSON'
   }).then(function (response) {
-    const reverseData = response.reverse() // reverse so the newest ones appear at the top
+    const reverseData = response.reverse()
     renderTweets(reverseData)
   })
 };
@@ -99,7 +93,6 @@ const escape = function (str) {
 
 const alertMessage = function (message) {
   $('.alert').text(message);
-  /*animate the bar*/
   $('.alert').slideDown(() => {
     setTimeout(() => {
       $('.alert').slideUp(() => {
@@ -111,7 +104,7 @@ const alertMessage = function (message) {
 
 
 $(document).ready(() => {
-  loadTweets(); // pastes tweets 
+  loadTweets();  
   $("form").on("submit", event => {
     event.preventDefault();
     const text = $("#tweet-text").val();

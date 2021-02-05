@@ -2,8 +2,8 @@ form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 1em
-
+  margin-bottom: 1em;
+  margin-left: 2%
 }
 
 textarea {
@@ -14,13 +14,14 @@ textarea {
 /* text box */
 textarea#tweet-text {
   display: flex;
-  border-bottom-width: 1px;
-  border-bottom-color: #4056A1;
+  border-bottom-width: 4px;
+  border-bottom-color: black;
   font-size: 20px;
   height: 40px;
   margin-bottom: .5em;
   margin-top: .5em;
-  width: 800px;
+  width: 100%;
+  background-color: beige;
 
   /* tweet button and coutner */
   
@@ -28,6 +29,8 @@ textarea#tweet-text {
   footer {
     display: flex;
     justify-content: space-between;
+    font-family: 'Bungee', cursive;
+    margin-right: 100px;
 
 }
 
