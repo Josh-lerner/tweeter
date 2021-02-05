@@ -15,9 +15,10 @@ The final product is a responsive twitter clone for mobile and desktop views.
 
 ## Screenshots
 
+### Screenshot of Desktop View
 !["Screen shot of Desktop view"](https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Desktop%20view.png)
 
-
+### Screenshot of Mobile View
 !["Screen shot of Mobile view"](https://github.com/Josh-lerner/tweeter/blob/master/.github/docs/Mobile%20view.png)
 
 ## Dependencies
