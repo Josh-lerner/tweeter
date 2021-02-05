@@ -18,7 +18,7 @@ nav {
   font-size: 1.2em;
 }
 
-#write-tweet {
+.write-tweet {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -30,9 +30,13 @@ nav {
   font-size: 1em;
   color: yellow;
   margin: 1.2em;
-
-
 }
+
+.write-tweet:hover {
+  font-size: 30px;
+  cursor: pointer;
+}
+
 #bounce {
   margin: 3px auto;
   color: red

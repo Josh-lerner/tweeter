@@ -1,17 +1,7 @@
 
 const data = []
 
-  // takes return value and appends it to the tweets container
-
-const renderTweets = function (tweets) {
-  const tweetsArr = [];
-  for (let tweet of tweets) {
-    tweetsArr.push(createTweetElement(tweet));
-  }
-  $(document).ready(() => {
-    $('.tweets-container').append(tweetsArr);
-  })
-};
+// takes return value and appends it to the tweets container
 
 
 
@@ -33,6 +23,16 @@ const createTweetElement = function (tweet) {
     </article>
   `
   return $tweet;
+};
+
+const renderTweets = function (tweets) {
+  const tweetsArr = [];
+  for (let tweet of tweets) {
+    tweetsArr.push(createTweetElement(tweet));
+  }
+  $(document).ready(() => {
+    $('.tweets-container').append(tweetsArr);
+  })
 };
 
 const timeElapsed = function (tweet) {
@@ -102,17 +102,57 @@ const alertMessage = function (message) {
   });
 };
 
+// Stretch: toggle new tweet
+const navToggle = function () {
+  $(".write-tweet")
+    .on("click", function (e) {
+      $("section.new-tweet").slideToggle(400, function () {
+        $(this).find(".tweet-text").focus();
+      });
+    });
+};
+
+
+const topScroll = function () {
+  $(document).scroll(function () {
+    if ($(window).scrollTop() > 200) {
+      $("div.to-top")
+        .show(300)
+        .on("click", function () {
+          $(document).off("scroll");
+          $("html, body").stop(true, false).animate({ scrollTop: "0" }, 300, () => {
+            $("div.to-top").hide(300);
+            $(document).scroll(topScroll);
+          });
+        });
+    }
+  });
+};
+
+$(() => {
+  $(document).scroll(function () {
+    topScroll();
+  });
+});
+
+$(() => {
+  $("section.sliding").hide();
+  $("section.new-tweet").hide();
+  $("div.to-top").hide();
+})
 
 $(document).ready(() => {
-  loadTweets();  
+  loadTweets();
+  navToggle();
+  topScroll();
   $("form").on("submit", event => {
     event.preventDefault();
-    const text = $("#tweet-text").val();
+    const text = $(".tweet-text").val();
     if (tweetValidation(text)) {
       $.ajax({
         type: "POST",
         url: "/tweets",
-        data: $("#tweet-text").serialize(),
+        data: $(".tweet-text").serialize(),
         dataType: "text"
       }).then(function () {
         $(".tweets-container").empty()

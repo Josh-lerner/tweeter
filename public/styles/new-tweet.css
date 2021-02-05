@@ -12,7 +12,7 @@ textarea {
   resize: none
 }
 /* text box */
-textarea#tweet-text {
+textarea.tweet-text {
   display: flex;
   border-bottom-width: 4px;
   border-bottom-color: black;

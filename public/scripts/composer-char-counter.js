@@ -8,7 +8,5 @@ $(document).ready(function() {
     } else {
       $("output.counter", $(this).parents("form")).removeClass("error")
     }
-
-
   })
 });
