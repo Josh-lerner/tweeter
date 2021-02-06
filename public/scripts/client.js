@@ -1,8 +1,5 @@
 let tweetContent = ""
-
-
 const data = []
-
 
 const createTweetElement = function (tweet) {
   

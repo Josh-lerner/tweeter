@@ -41,7 +41,9 @@ footer button {
   border-left: 5px;
 
 }
-
+footer button:hover {
+  cursor: pointer;
+}
 
 footer output.counter.error {
   color: 	red

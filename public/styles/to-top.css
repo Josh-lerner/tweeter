@@ -21,4 +21,5 @@ div.to-top:hover {
   right: 45px;
   bottom: 45px;
   font-size: 35px;
+  cursor: pointer;
 } 
