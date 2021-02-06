@@ -1,6 +1,19 @@
 [
   {
     "user": {
+      "name": "Josh Lerner",
+      "avatars": "https://i.imgur.com/73hZDYK.png"
+      ,
+      "handle": "@fullStack"
+    },
+    "content": {
+      "text": "Check out my LinkedIn page: www.linkedin.com/in/joshua-lerner95"
+    },
+    "created_at": 1611926292227
+  },
+
+  {
+    "user": {
       "name": "Newton",
       "avatars": "https://i.imgur.com/73hZDYK.png"
       ,
